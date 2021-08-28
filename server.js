@@ -50,7 +50,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session(sess));
 
 // Give the server the path to the routes
-// app.use(routes);
+app.use(routes);
 
 // Turn on connection to db and then to the server
 // force: true to reset the database and clear all values, updating any new relationships
