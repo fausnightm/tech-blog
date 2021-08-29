@@ -59,6 +59,8 @@ app.get("*", (req, res) => {
   res.sendFile(url);
 });
 
+socket = io.listen(process.env.PORT);
+
 // Turn on connection to db and then to the server
 // force: true to reset the database and clear all values, updating any new relationships
 // force: false to maintain data - aka normal operation
