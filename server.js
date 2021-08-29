@@ -52,6 +52,13 @@ app.use(session(sess));
 // Give the server the path to the routes
 app.use(routes);
 
+app.get("*", (req, res) => {
+  let url = path.join(__dirname, './views/layouts', 'main.handlebars');
+  if (!url.startsWith('/app/')) // since we're on local windows
+    url = url.substring(1);
+  res.sendFile(url);
+});
+
 // Turn on connection to db and then to the server
 // force: true to reset the database and clear all values, updating any new relationships
 // force: false to maintain data - aka normal operation
