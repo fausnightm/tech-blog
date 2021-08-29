@@ -96,6 +96,7 @@ router.get('/post/:id', (req, res) => {
 
 // Render the login page.  If the user is logged in, redirect to the home page.
 router.get('/login', (req, res) => {
+
     if (req.session.loggedIn) {
       res.redirect('/');
       return;
