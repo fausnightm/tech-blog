@@ -18,14 +18,15 @@
           <span><a href="/">home</a></span> 
           {{#if loggedIn}}
           <button id="logout" class="btn-no-style" onclick="logout()">logout</button>
-
           {{else}}
           {{!-- <button id="login" class="btn-no-style" onclick="promptSignInOrSignUp();">login</button> --}}
           <a href="/login">login</a>
           {{/if}}
           {{!-- <button id="dashboard" class="btn-no-style">dashboard</button> --}}
 
-          <a href="/dashboard">dashboard</a>
+          <li>
+                <p><a class="link" href="/dashboard">Dashboard</a></p>
+          </li>
 
         </nav>
     </header>
@@ -39,6 +40,7 @@
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  <script src="/javascript/home.js"></script>
   {{/if}}
 
 </body>
